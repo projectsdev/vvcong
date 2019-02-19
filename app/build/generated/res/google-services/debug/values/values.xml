@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">726129007512-hq1dva5vtugeccq4s8bicopaaup2vlo9.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://vyaparivyavasayicongress-8932d.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">726129007512</string>
+    <string name="google_api_key" translatable="false">AIzaSyAe4cUdBko-rBCCvpxF6kBmcVJiGa8vJUk</string>
+    <string name="google_app_id" translatable="false">1:726129007512:android:e001a9c3e2cd11a3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAe4cUdBko-rBCCvpxF6kBmcVJiGa8vJUk</string>
+    <string name="google_storage_bucket" translatable="false">vyaparivyavasayicongress-8932d.appspot.com</string>
+    <string name="project_id" translatable="false">vyaparivyavasayicongress-8932d</string>
+</resources>

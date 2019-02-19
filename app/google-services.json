@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "726129007512",
+    "firebase_url": "https://vyaparivyavasayicongress-8932d.firebaseio.com",
+    "project_id": "vyaparivyavasayicongress-8932d",
+    "storage_bucket": "vyaparivyavasayicongress-8932d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726129007512:android:e001a9c3e2cd11a3",
+        "android_client_info": {
+          "package_name": "com.example.vyaparivyvasayicongressapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726129007512-m8mhod8oq5484dt7esr7qppjnaer2gcq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vyaparivyvasayicongressapp",
+            "certificate_hash": "a261a6d0ae2d6a7bf1b6e4ee40f640c24e4cad4c"
+          }
+        },
+        {
+          "client_id": "726129007512-hq1dva5vtugeccq4s8bicopaaup2vlo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe4cUdBko-rBCCvpxF6kBmcVJiGa8vJUk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726129007512-hq1dva5vtugeccq4s8bicopaaup2vlo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726129007512:android:e9666c8744c9a231",
+        "android_client_info": {
+          "package_name": "com.example.vyspsrivyavasayiadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726129007512-3qlgvm87g083qnjifren04seervsn62b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vyspsrivyavasayiadmin",
+            "certificate_hash": "af87eb93733a9f451ab0d2058f3d6cd0c20b0cc9"
+          }
+        },
+        {
+          "client_id": "726129007512-fshlfvnaokp0ubafp7sk1dbvkf9k5igo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vyspsrivyavasayiadmin",
+            "certificate_hash": "f225efd359a7a5a72337ae7a324972383bd75286"
+          }
+        },
+        {
+          "client_id": "726129007512-hq1dva5vtugeccq4s8bicopaaup2vlo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe4cUdBko-rBCCvpxF6kBmcVJiGa8vJUk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726129007512-hq1dva5vtugeccq4s8bicopaaup2vlo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
