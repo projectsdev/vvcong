@@ -1,17 +1,10 @@
 package com.example.vyaparivyvasayicongressapp;
 
-
-import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.ProgressBar;
-
-import com.google.firebase.FirebaseApp;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
