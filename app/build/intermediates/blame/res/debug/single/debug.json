@@ -64,6 +64,10 @@
         "source": "/home/akhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/42ae58427e64439149528a28739743a8/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/font_roboto_medium.xml.flat",
+        "source": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/res/font/roboto_medium.xml"
+    },
+    {
         "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/home/akhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/42ae58427e64439149528a28739743a8/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
@@ -522,6 +526,10 @@
     {
         "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
         "source": "/home/akhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/42ae58427e64439149528a28739743a8/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/font_roboto_light.xml.flat",
+        "source": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/res/font/roboto_light.xml"
     },
     {
         "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -1250,6 +1258,10 @@
     {
         "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/home/akhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/42ae58427e64439149528a28739743a8/res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/font_nunito_extralight.xml.flat",
+        "source": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/res/font/nunito_extralight.xml"
     },
     {
         "merged": "/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",

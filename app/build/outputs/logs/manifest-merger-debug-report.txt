@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [com.github.ApendIr:slider:1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/slider-1.0.aar/d2595bef6d7e62dfbcc69e69f2c8fd70/AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.support:design:26.1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e99c171d21eac371df38db0d825a973b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/42ae58427e64439149528a28739743a8/AndroidManifest.xml:17:1-31:12
@@ -33,20 +33,20 @@ MERGED from [com.android.support:support-core-ui:26.1.0] /home/akhil/.gradle/cac
 MERGED from [com.android.support:support-compat:26.1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/6452fa7864fd102f1f0915c3b2b69131/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /home/akhil/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/fa3cf59bd64cd53e6eedb784926e9fb2/AndroidManifest.xml:2:1-7:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0183458f9b61e6fa3a0a9586e2117aec/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:3:5-53
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
-		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
+		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
-		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-23:12
+		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:2:11-69
@@ -59,7 +59,7 @@ MERGED from [com.google.firebase:firebase-iid:17.0.4] /home/akhil/.gradle/caches
 	android:name
 		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:5:5-21:19
+ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:5:5-25:19
 MERGED from [com.github.ApendIr:slider:1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/slider-1.0.aar/d2595bef6d7e62dfbcc69e69f2c8fd70/AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.ApendIr:slider:1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/slider-1.0.aar/d2595bef6d7e62dfbcc69e69f2c8fd70/AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:design:26.1.0] /home/akhil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e99c171d21eac371df38db0d825a973b/AndroidManifest.xml:25:5-29:19
@@ -146,6 +146,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:18:27-74
+meta-data#preloaded_fonts
+ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:22:9-24:57
+	android:resource
+		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:24:13-54
+	android:name
+		ADDED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml:23:13-43
 uses-sdk
 INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/akhil/PProjects/VyapariVyvasayiCongressApp/app/src/main/AndroidManifest.xml

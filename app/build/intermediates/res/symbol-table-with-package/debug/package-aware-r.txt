@@ -18,6 +18,10 @@ anim progress
 anim tooltip_enter
 anim tooltip_exit
 animator design_appbar_state_list_animator
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 array status
 attr actionBarDivider
 attr actionBarItemBackground
@@ -565,6 +569,7 @@ color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color textbackground
+color textcolor
 color tooltip_background_dark
 color tooltip_background_light
 color transparent
@@ -873,6 +878,9 @@ drawable ripple_effect
 drawable text
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font nunito_extralight
+font roboto_light
+font roboto_medium
 id ALT
 id CTRL
 id FUNCTION
@@ -1078,8 +1086,6 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
-id toolbar
-id toolbar2
 id top
 id topPanel
 id touch_outside

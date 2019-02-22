@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },500);
-
-
-        ProgressBar pgsBar = (ProgressBar)findViewById(R.id.progressBar);
-        pgsBar.setVisibility(View.VISIBLE);
-
+        },1500);
     }
 }
