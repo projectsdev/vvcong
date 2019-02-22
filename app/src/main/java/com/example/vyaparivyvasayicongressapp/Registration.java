@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -98,10 +99,10 @@ public class Registration extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(phone.getText()) || phone.getText().length() != 10) {
                     phone.setError("Enter a valid phone number!");
                     return;
-                } else if (TextUtils.isEmpty(email.getText())) {
+                } /*else if (TextUtils.isEmpty(email.getText())) {
                     email.setError("Email is required!");
                     return;
-                } else if (status_spinner.getSelectedItemPosition() == 0) {
+                }*/ else if (status_spinner.getSelectedItemPosition() == 0) {
                     Toast.makeText(context, "Please select the status!", Toast.LENGTH_SHORT).show();
                     return;
                 } else if (status_spinner.getSelectedItemPosition() == 7)
@@ -168,7 +169,7 @@ public class Registration extends AppCompatActivity {
         });
 
     }
-
+    HashMap<String,List<String>>  a_codes = new HashMap<>();
     void getAreaList() {
 
         reference = database.getReference("ListArea");
@@ -176,15 +177,27 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 setVisibles();
+                Log.d("getAreaList", String.valueOf(dataSnapshot));
                 if (dataSnapshot.exists()) {
                     object = (HashMap<Object, Object>) dataSnapshot.getValue();
                     for (Map.Entry<Object, Object> entry : object.entrySet()) {
                         String key = (String) entry.getKey();
                         area.add(key);
+                        List<String> array = new ArrayList<>();
+                        ArrayList<String> list = (ArrayList<String>) entry.getValue();
+                        Iterator<?> e = list.iterator();
+                        while(e.hasNext()) {
+                            String k = (String) e.next();
+                            if(k!=null)
+                              array.add(k);
+                        }
+                        a_codes.put(key,array);
+
                     }
+                    Log.d("getAreaList", String.valueOf(a_codes));
                     area_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item, area);
                     area_code_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item,
-                            (List<String>) object.get(area.get(0)));
+                             a_codes.get(area.get(0)));
                     area_spinner.setAdapter(area_adapter);
                     area_code_spinner.setAdapter(area_code_adapter);
                     setAreaAdapter();
@@ -207,7 +220,7 @@ public class Registration extends AppCompatActivity {
                 String selected_item = (String) area_spinner.getSelectedItem();
                 areas = selected_item;
                 area_code_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item,
-                        (List<String>) object.get(selected_item));
+                         a_codes.get(selected_item));
                 area_code_spinner.setAdapter(area_code_adapter);
             }
 
@@ -247,7 +260,7 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 Toast.makeText(context, "Registration success!", Toast.LENGTH_SHORT).show();
-                clearFields();
+//                clearFields();
             }
         });
 
@@ -267,7 +280,7 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 Toast.makeText(context, "Registration success!", Toast.LENGTH_SHORT).show();
-                clearFields();
+//                clearFields();
             }
         });
     }

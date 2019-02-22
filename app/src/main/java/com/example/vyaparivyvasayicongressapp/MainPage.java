@@ -7,13 +7,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
 import ir.apend.slider.model.Slide;
 import ir.apend.slider.ui.Slider;
 
@@ -25,6 +29,7 @@ public class MainPage extends AppCompatActivity {
     DatabaseReference reference;
     FirebaseDatabase database;
     Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,25 +48,30 @@ public class MainPage extends AppCompatActivity {
             }
         });
     }
-    void getBannerSlides(){
+
+    void getBannerSlides() {
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("Slider-Images/carousal");
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
+                if (dataSnapshot.exists()) {
                     ArrayList<String> array = (ArrayList<String>) dataSnapshot.getValue();
                     Log.e("datasnap", String.valueOf(array));
-                    int length = array.size();
-                    int i = 0;
-                    while( i < length )
-                    slideList.add(new Slide(0, array.get(i++), getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
-                    Log.e("size", String.valueOf(slideList.size()));
-                    slider.addSlides(slideList);
+                    Iterator<?> it = array.iterator();
+                    while (it.hasNext()) {
+                        String url = (String) it.next();
+                        if (url != null)
+                            slideList.add(new Slide(0, url, getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
+                    }
+                    if (!slideList.isEmpty())
+                        slider.addSlides(slideList);
+                    else {
+                        slider.setVisibility(View.GONE);
+                    }
 
-                }
-                else{
-
+                } else {
+                    slider.setVisibility(View.GONE);
                 }
             }
 
