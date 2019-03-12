@@ -1,0 +1,4 @@
+#Tue Mar 12 14:14:00 IST 2019
+base.0=/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/dex/release/mergeDexRelease/out
+path.0=classes.dex
+renamed.0=classes.dex

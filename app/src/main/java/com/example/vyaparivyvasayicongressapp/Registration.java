@@ -16,11 +16,13 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,7 +35,7 @@ public class Registration extends AppCompatActivity {
 
     EditText name, address, phone, email;
     TextView area_code_label, area_label;
-    Spinner area_spinner, area_code_spinner, status_spinner;
+    Spinner area_spinner, area_code_spinner, status_spinner, blood_group_spinner;
     Button button;
     Context context;
     HashMap<String, String> User_Details = new HashMap<>();
@@ -45,7 +47,7 @@ public class Registration extends AppCompatActivity {
     HashMap<Object, Object> object;
     ArrayAdapter<String> area_adapter;
     ArrayAdapter<String> area_code_adapter;
-    ArrayAdapter<CharSequence> status_adapter;
+    ArrayAdapter<CharSequence> status_adapter, blood_group_adapter;
     ArrayList<String> area = new ArrayList<>();
     String area_code = "", areas = "", contact = "";
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -68,15 +70,20 @@ public class Registration extends AppCompatActivity {
         area_code_spinner = findViewById(R.id.area_code_spinner);
         area_spinner = findViewById(R.id.area_spinner);
         status_spinner = findViewById(R.id.spinner);
+        blood_group_spinner = findViewById(R.id.blood_spinner);
         setInVisibles();
         // Create an ArrayAdapter using the string array and a default spinner layout
         status_adapter = ArrayAdapter.createFromResource(context,
                 R.array.status, android.R.layout.simple_spinner_item);
+        blood_group_adapter = ArrayAdapter.createFromResource(context,
+                R.array.blood_group, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         status_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         status_spinner.setAdapter(status_adapter);
+        blood_group_spinner.setAdapter(blood_group_adapter);
         database = FirebaseDatabase.getInstance();
+
         status_map.put(1, "president");
         status_map.put(2, "general_secretary");
         status_map.put(3, "vice_president");
@@ -89,7 +96,7 @@ public class Registration extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int spinner_pos = status_spinner.getSelectedItemPosition();
                 if (TextUtils.isEmpty(name.getText())) {
                     name.setError("Name is required!");
                     return;
@@ -97,7 +104,7 @@ public class Registration extends AppCompatActivity {
                     address.setError("Address is required!");
                     return;
                 } else if (TextUtils.isEmpty(phone.getText()) || phone.getText().length() != 10) {
-                    phone.setError("Enter a valid phone number!");
+                    phone.setError("Enter a valid phone number! Don't use country codes.");
                     return;
                 } /*else if (TextUtils.isEmpty(email.getText())) {
                     email.setError("Email is required!");
@@ -105,11 +112,13 @@ public class Registration extends AppCompatActivity {
                 }*/ else if (status_spinner.getSelectedItemPosition() == 0) {
                     Toast.makeText(context, "Please select the status!", Toast.LENGTH_SHORT).show();
                     return;
-                } else if (status_spinner.getSelectedItemPosition() == 7)
-                    updateMember();
-                else {
+                } else if (spinner_pos == 1) { // only president
+
                     status_selected = (String) status_spinner.getSelectedItem();
-                    checkStatus(status_spinner.getSelectedItemPosition());
+                    checkStatus(spinner_pos);
+                } else if (spinner_pos != 0) {
+
+                    updatePerson(spinner_pos);
                 }
 
             }
@@ -118,9 +127,10 @@ public class Registration extends AppCompatActivity {
 
     }
 
-    void updateMember() {
+    void updatePerson(int spinner_pos) {
+        final String status = status_map.get(spinner_pos);
         contact = phone.getText().toString();
-        reference = database.getReference("Area/" + areas + '/' + area_code + "/members/" + contact);
+        reference = database.getReference("Area/" + areas + '/' + area_code + "/" + status + "/" + contact);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -129,7 +139,7 @@ public class Registration extends AppCompatActivity {
                     Toast.makeText(context, "Member Already Registered!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                RegisterMember();
+                RegisterPerson(status);
 
             }
 
@@ -156,9 +166,9 @@ public class Registration extends AppCompatActivity {
                     if (registered)
                         Toast.makeText(context, status_selected + " already registered!", Toast.LENGTH_SHORT).show();
                     else
-                        RegisterUser(status);
+                        RegisterPresident(status);
                 } else {
-                    RegisterUser(status);
+                    RegisterPresident(status);
                 }
             }
 
@@ -169,7 +179,9 @@ public class Registration extends AppCompatActivity {
         });
 
     }
-    HashMap<String,List<String>>  a_codes = new HashMap<>();
+
+    HashMap<String, List<String>> a_codes = new HashMap<>();
+
     void getAreaList() {
 
         reference = database.getReference("ListArea");
@@ -186,18 +198,18 @@ public class Registration extends AppCompatActivity {
                         List<String> array = new ArrayList<>();
                         ArrayList<String> list = (ArrayList<String>) entry.getValue();
                         Iterator<?> e = list.iterator();
-                        while(e.hasNext()) {
+                        while (e.hasNext()) {
                             String k = (String) e.next();
-                            if(k!=null)
-                              array.add(k);
+                            if (k != null)
+                                array.add(k);
                         }
-                        a_codes.put(key,array);
+                        a_codes.put(key, array);
 
                     }
                     Log.d("getAreaList", String.valueOf(a_codes));
                     area_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item, area);
                     area_code_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item,
-                             a_codes.get(area.get(0)));
+                            a_codes.get(area.get(0)));
                     area_spinner.setAdapter(area_adapter);
                     area_code_spinner.setAdapter(area_code_adapter);
                     setAreaAdapter();
@@ -220,7 +232,7 @@ public class Registration extends AppCompatActivity {
                 String selected_item = (String) area_spinner.getSelectedItem();
                 areas = selected_item;
                 area_code_adapter = new ArrayAdapter<>(context, R.layout.support_simple_spinner_dropdown_item,
-                         a_codes.get(selected_item));
+                        a_codes.get(selected_item));
                 area_code_spinner.setAdapter(area_code_adapter);
             }
 
@@ -246,7 +258,7 @@ public class Registration extends AppCompatActivity {
         });
     }
 
-    void RegisterUser(String status) {
+    void RegisterPresident(String status) {
         reference = database.getReference("Area/" + areas + '/' + area_code + "/" + status);
         HashMap<String, Object> details = new HashMap<>();
         details.put("name", name.getText().toString());
@@ -254,33 +266,35 @@ public class Registration extends AppCompatActivity {
         details.put("phone", phone.getText().toString());
         details.put("email", email.getText().toString());
         details.put("timestamp", dateFormat.format(new Date()));
-        details.put("status",status_spinner.getSelectedItem());
+        details.put("status", status_spinner.getSelectedItem());
+        details.put("blood",(String)blood_group_spinner.getSelectedItem());
         details.put("registered", true);
         reference.updateChildren(details, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 Toast.makeText(context, "Registration success!", Toast.LENGTH_SHORT).show();
-//                clearFields();
+                clearFields();
             }
         });
 
     }
 
-    void RegisterMember() {
+    void RegisterPerson(String status) {
 
-        reference = database.getReference("Area/" + areas + '/' + area_code + "/members/" + contact);
+        reference = database.getReference("Area/" + areas + '/' + area_code + "/"+status+"/" + contact);
         HashMap<String, Object> details = new HashMap<>();
         details.put("name", name.getText().toString());
         details.put("address", address.getText().toString());
         details.put("phone", phone.getText().toString());
         details.put("email", email.getText().toString());
-        details.put("status",status_spinner.getSelectedItem());
+        details.put("status", status_spinner.getSelectedItem());
+        details.put("blood",(String)blood_group_spinner.getSelectedItem());
         details.put("timestamp", dateFormat.format(new Date()));
         reference.updateChildren(details, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 Toast.makeText(context, "Registration success!", Toast.LENGTH_SHORT).show();
-//                clearFields();
+                clearFields();
             }
         });
     }

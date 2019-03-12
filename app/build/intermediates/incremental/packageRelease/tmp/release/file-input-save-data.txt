@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Mar 12 14:14:01 IST 2019
+0.baseType=DIRECTORY
+0.base=/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/dex/release/mergeDexRelease/out
+0.path=classes.dex
+0.set=DEX
+count=1

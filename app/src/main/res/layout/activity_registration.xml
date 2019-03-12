@@ -72,13 +72,24 @@
             android:padding="9dp"
             android:paddingLeft="5sp"
             android:paddingRight="5sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Blood Group"
+            android:layout_marginTop="20dp"/>
+
+        <Spinner
+            android:id="@+id/blood_spinner"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"></Spinner>
 
         <ProgressBar
             android:id="@+id/bar"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:id="@+id/area_label"

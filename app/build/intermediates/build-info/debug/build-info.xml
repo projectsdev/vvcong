@@ -2,13 +2,13 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
-    plugin-version="3.3.1"
-    timestamp="1550822445974"
+    plugin-version="3.3.2"
+    timestamp="1552379589067"
     token="-3098445463929326656"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -24,77 +24,57 @@
         duration="0" />
 
     <artifact
-        location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1550821656229"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1552379217139"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
+        <artifact
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1550822166121"
+        timestamp="1552379589067"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
         <artifact
             location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1550822254208"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/builds/debug/1550822254208/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1550822445974"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/akhil/PProjects/VyapariVyvasayiCongressApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>
